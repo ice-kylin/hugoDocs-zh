@@ -45,4 +45,104 @@ hugo --config a.toml,b.toml,c.toml
 
 > 默认情况下，开发环境是使用 `hugo serve` 命令时， 生产环境是使用 `hugo` 命令时。
 
+## 所有配置设置
+
+以下是 Hugo 定义的变量的完整列表，其默认值用括号括起来。 用户可以选择在其站点配置文件中覆盖这些值。
+
+### archetypeDir (“archetypes”)
+
+Hugo 在其中找到原型文件（内容模板）的目录。 另请参阅模块安装配置，以获取配置此目录的另一种方式（来自 Hugo 0.56）。
+
+### assetDir (“assets”)
+
+Hugo 查找 Hugo Pipes 中使用的资产文件的目录。 另请参阅模块安装配置，以获取配置此目录的另一种方式（来自 Hugo 0.56）。
+
+### baseURL
+
+根的主机名（和路径），例如 https://bep.is/。
+
+### blackfriday
+
+请参阅配置 Blackfriday。
+
+### build
+
+请参阅配置构建。
+
+### buildDrafts (false)
+
+构建时包括草稿。
+
+### buildExpired (false)
+
+包含内容已过期。
+
+### buildFuture (false)
+
+包括将来发布的内容。
+
+### caches
+
+请参阅配置文件缓存
+
+### canonifyURLs (false)
+
+启用以将相对 URL 变为绝对 URL。
+
+### contentDir (“content”)
+
+Hugo 从中读取内容文件的目录。 另请参阅模块安装配置，以获取配置此目录的另一种方式（来自 Hugo 0.56）。
+
+### dataDir (“data”)
+
+Hugo 从中读取数据文件的目录。 另请参阅模块安装配置，以获取配置此目录的另一种方式（来自 Hugo 0.56）。
+
+### defaultContentLanguage (“en”)
+
+没有语言指示符的内容将默认为该语言。
+
+### defaultContentLanguageInSubdir (false)
+
+在 subdir 中呈现默认的内容语言，例如内容 `content/en/`。站点根目录 `/` 将重定向到 `/en/`。
+
+### disableAliases (false)
+
+将禁用别名重定向的生成。请注意，即使设置了 `disableAliases`，别名本身也会保留在页面上。这样做的目的是能够使用自定义输出格式在 `.htaccess`，Netlify `_redirects`文件或类似文件中生成 301 重定向。
+
+### disableHugoGeneratorInject (false)
+
+默认情况下，Hugo 只会在首页的 HTML 头中插入一个 generator meta 标签。您可以关闭它，但如果您不这样做，我们将不胜感激，因为这是观看雨果（Hugo）人气上升的好方法。
+
+### disableKinds ([])
+
+启用禁用所有指定种类的页面。此列表中允许的值："page", "home", "section", "taxonomy", "taxonomyTerm", "RSS", "sitemap", "robotsTXT", "404"。
+
+disableLiveReload（假）
+
+禁用自动实时重新加载浏览器窗口。
+
+disablePathToLower（false）
+
+请勿将网址/路径转换为小写。
+
+enableEmoji（假）
+
+为页面内容启用表情符号表情支持；请参阅表情符号备忘单。
+
+enableGitInfo（假）
+
+为每个页面启用.GitInfo 对象（如果 Hugo 网站由 Git 版本控制）。然后，它将使用该内容文件的最后 git 提交日期来更新每个页面的 Lastmod 参数。
+
+enableInlineShortcodes（假）
+
+启用内联短代码支持。请参阅内联简码。
+
+enableMissingTranslationPlaceholders（false）
+
+如果缺少翻译，请显示一个占位符而不是默认值或空字符串。
+
+enableRobotsTXT（假）
+
+启用生成 robots.txt 文件。
+
 > “Configure Hugo” was last updated: May 27, 2020: Add redirect support to the server (2fd83db96)
